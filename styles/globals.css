@@ -8,6 +8,10 @@
   body {
     font-family: 'Rubik', sans-serif;
   }
+
+  .Card {
+    @apply transition-[background-color] bg-gray-lighter text-clip dark:bg-gray-darker;
+  }
 }
 
 .header {
@@ -47,5 +51,8 @@ span {
 }
 
 .Card {
-  @apply transition-colors bg-gray-lighter text-clip dark:bg-gray-darker p-4 rounded-xl border-2 border-transparent w-1/3 hover:border-red;
+  @apply p-4 w-full flex flex-col h-64 justify-between rounded-xl border-2 border-transparent hover:border-red;
+}
+.Card h3 {
+  @apply font-bold text-xl ;
 }

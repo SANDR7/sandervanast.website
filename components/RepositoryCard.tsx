@@ -11,15 +11,17 @@ const RepositoryCard: FC<repoProps> = ({
   topics
 }) => {
   return (
-      <a href={html_url} className='Card w-1/3' target="_blank" rel="noreferrer">
-        <h3>{full_name}</h3>
+    <a href={html_url} className="Card w-1/3" target="_blank" rel="noreferrer">
+      <div>
+        <h3>{name}</h3>
+      {description && <p className="text-gray-mid">{description}</p>}
+      </div>
 
-        <div>
-          <div>{stars} stars</div>
-          <div>{language}</div>
-          <div>{topics.join(', ')}</div>
-        </div>
-      </a>
+      <div className='flex justify-between'>
+        <div>{language}</div>
+        <div>{stars} stars</div>
+      </div>
+    </a>
   );
 };
 export default RepositoryCard;

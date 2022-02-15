@@ -31,7 +31,7 @@ const Row: FC<RowProps> = ({
           <i className="fa-solid fa-arrow-right ml-1 transition-transform transform translate-x-1 group-hover:translate-x-3"></i>
         </span>
       )}
-      <div>{children}</div>
+      <div className='mt-6'>{children}</div>
     </div>
   );
 };
