@@ -16,7 +16,7 @@ const MainPage: FC<MainProps> = ({ children, ...customMeta }) => {
   useEffect(() => setMounted(true), []);
 
   const meta = {
-    title: 'Sander van Ast - Homepage',
+    title: 'Sander van Ast - Developing in process',
     description: `Typescript developer, Graphic Designer, and open minded.`,
     image: '',
     type: 'website',
@@ -24,7 +24,7 @@ const MainPage: FC<MainProps> = ({ children, ...customMeta }) => {
   };
 
   return (
-    <div className="">
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -41,11 +41,17 @@ const MainPage: FC<MainProps> = ({ children, ...customMeta }) => {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-      
-      <main className="">
-        {children}
-      </main>
-    </div>
+      <button
+        aria-label="Toggle Dark Mode"
+        type="button"
+        className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      >
+        {resolvedTheme === 'dark' ? <span>light</span> : <span>dark</span>}
+      </button>
+
+      <main className="container mx-auto">{children}</main>
+    </>
   );
 };
 
