@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
+}
 
 .header {
   @apply font-bold text-2xl md:text-5xl;
@@ -10,12 +18,16 @@ h1.header {
   @apply text-orange text-5xl;
 }
 
+h2.header {
+  @apply text-xl md:text-2xl;
+}
+
 .Container {
   @apply flex flex-col justify-center items-start max-w-3xl mx-auto px-6;
 }
 
 .Row {
-@apply py-12;
+  @apply py-12;
 }
 
 .profile {
@@ -25,6 +37,15 @@ h1.header {
   @apply w-8/12;
 }
 
-p, span {
+a {
+  cursor: pointer;
+}
+
+p,
+span {
   @apply text-base md:text-xl;
+}
+
+.Card {
+  @apply transition-colors bg-gray-lighter text-clip dark:bg-gray-darker p-4 rounded-xl border-2 border-transparent w-1/3 hover:border-red;
 }
