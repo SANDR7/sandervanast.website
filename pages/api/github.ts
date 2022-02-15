@@ -26,9 +26,9 @@ export default async function handler(
         full_name: repo.full_name,
         language: repo.language,
         description: repo.description,
-        repo_url: repo.html_url,
         topics: repo.topics,
-        stars: repo.stargazers_count,
+        html_url: repo.html_url,
+        stargazers_count: repo.stargazers_count,
     }));
 
     res.setHeader(
