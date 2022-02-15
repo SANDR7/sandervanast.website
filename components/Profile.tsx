@@ -12,10 +12,10 @@ const Profile: FC<ProfileProps> = ({ name, title, bio, avatar, portrait }) => {
   return (
     <div className="profile">
       <div className="relative">
-        <img src={portrait} className="w-64" alt={`${name} portrait`} />
+        <img src={portrait} className="md:w-64 w-48" alt={`${name} portrait`} />
         <img
           src={avatar}
-          className="absolute bottom-0 left-0 w-24"
+          className="absolute bottom-0 left-0 md:w-24 w-20"
           alt={`${name} avatar `}
         />
       </div>

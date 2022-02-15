@@ -50,7 +50,7 @@ const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
         {resolvedTheme === 'dark' ? <span>light</span> : <span>dark</span>}
       </button>
 
-      <main>{children}</main>
+      <main className='Container'>{children}</main>
     </>
   );
 };

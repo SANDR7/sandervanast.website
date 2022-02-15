@@ -10,12 +10,16 @@ h1.header {
   @apply text-orange text-5xl;
 }
 
+.Container {
+  @apply flex flex-col justify-center items-start max-w-3xl mx-auto px-6;
+}
+
 .Row {
-  @apply flex flex-col justify-center items-start max-w-2xl mx-auto;
+@apply py-12;
 }
 
 .profile {
-  @apply flex justify-evenly gap-10;
+  @apply grid sm:flex justify-evenly gap-10;
 }
 .profile p {
   @apply w-8/12;
