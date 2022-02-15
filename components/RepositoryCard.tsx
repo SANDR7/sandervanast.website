@@ -13,7 +13,7 @@ const RepositoryCard: FC<repoProps> = ({
   return (
     <a href={html_url} className="Card w-1/3" target="_blank" rel="noreferrer">
       <div>
-        <h3>{name}</h3>
+        <h3>{full_name}</h3>
       {description && <p className="text-gray-mid">{description}</p>}
       </div>
 

@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               url: 'https://github.com/SANDR7?tab=repositories'
             }}
           >
-            <div className="grid grid-cols-3 gap-3">
+            <div className="flex gap-4 flex-col md:flex-row">
               {data ? (
                 data.latest_repos.map((repo: repoProps, idx: number) => (
                   <RepositoryCard
