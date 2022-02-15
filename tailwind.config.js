@@ -11,8 +11,10 @@ module.exports = {
       red: '#C94040',
       orange: '#FF7B47',
       green: '#38C4B2',
-      'gray-dark': '#2E2E2E',
-      'gray-light': '#F9F9F9'
+      gray: '#2E2E2E',
+      'gray-dark': '#1A1A1A',
+      'gray-mid': '#A3A3A3', 
+      'gray-light': '#F9F9F9',
     },
     fontFamily: {
       sans: ['rubik', 'sans-serif']

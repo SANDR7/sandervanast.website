@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  @apply font-bold text-2xl md:text-5xl;
+}
+
+h1.header {
+  @apply text-orange text-5xl;
+}
+
+.Row {
+  @apply flex flex-col justify-center items-start max-w-2xl mx-auto;
+}
+
+.profile {
+  @apply flex justify-evenly gap-10;
+}
+.profile p {
+  @apply w-8/12;
+}
+
+p, span {
+  @apply text-base md:text-xl;
+}
