@@ -54,9 +54,9 @@ span {
   @apply text-base md:text-lg;
 }
 
-.Card {
+.Row .Card {
   @apply break-all transition-[border] transition-[transform] p-4 flex flex-col h-40 md:h-48 justify-between rounded-xl border-green border-b-4 hover:-translate-y-3;
 }
-.Card h3 {
+.Row .Card h3 {
   @apply font-bold text-xl;
 }
