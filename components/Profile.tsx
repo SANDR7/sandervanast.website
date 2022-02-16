@@ -12,12 +12,26 @@ const Profile: FC<ProfileProps> = ({ name, title, bio, avatar, portrait }) => {
   return (
     <div className="profile">
       <div className="relative">
-        <img src={portrait} className="md:w-64 w-48" alt={`${name} portrait`} />
-        <img
-          src={avatar}
-          className="absolute bottom-0 left-0 md:w-24 w-20"
-          alt={`${name} avatar `}
-        />
+        <a
+          href="https://www.linkedin.com/in/sander-van-ast/"
+          target={'_blank'}
+          rel="noreferrer"
+        >
+          <img
+            src={portrait}
+            className="md:w-64 w-48"
+            title={`Portrait of ${name}`}
+            alt={`${name} portrait`}
+          />
+        </a>
+        <a href="https://github.com/SANDR7" target={'_blank'} rel="noreferrer">
+          <img
+            src={avatar}
+            className="absolute bottom-0 left-0 md:w-24 w-20"
+            title={`Avatar of ${name}`}
+            alt={`${name} avatar `}
+          />
+        </a>
       </div>
       <div>
         <div className="mb-2">

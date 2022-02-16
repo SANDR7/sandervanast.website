@@ -39,7 +39,7 @@ h3.header {
 }
 
 .profile {
-  @apply grid sm:flex justify-start gap-10;
+  @apply grid sm:flex justify-start md:justify-center gap-10 py-10;
 }
 .profile p {
   @apply w-8/12;
