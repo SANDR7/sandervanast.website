@@ -29,7 +29,7 @@ const Document = () => {
           rel="mask-icon"
         />
         <meta content="#F9F9F9" name="theme-color" />
-        <meta content="#F9F9F9" name="msApplication-TileColor" />
+        <meta content="#F9F9F9" name="msapplication-TileColor" />
         <script
           async
           src="https://kit.fontawesome.com/e48f77a7cf.js"
