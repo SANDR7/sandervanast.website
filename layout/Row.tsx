@@ -24,11 +24,11 @@ const Row: FC<RowProps> = ({
       <h2 className="header">{title}...</h2>
       {description && <p className="text-gray-mid">{description}</p>}
       {link && (
-        <span className="group">
+        <span className="group flex items-center">
           <Link href={link.url} passHref>
             <a target={linkNewTab ? '_blank' : '_self'}>{link.name}</a>
           </Link>
-          <i className="fa-solid fa-arrow-right ml-1 transition-[transform] translate-x-1 group-hover:-rotate-45 group-hover:translate-x-3"></i>
+          <i className="fa-solid fa-arrow-right ml-1 mt-[3px] transition-[transform] translate-x-1 group-hover:-rotate-45 group-hover:translate-x-3"></i>
         </span>
       )}
       <div className='mt-6'>{children}</div>

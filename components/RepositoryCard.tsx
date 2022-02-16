@@ -13,11 +13,13 @@ const RepositoryCard: FC<repoProps> = ({
   return (
     <a href={html_url} className="Card" target="_blank" rel="noreferrer">
       <div>
-        <h3>{full_name}</h3>
-      {description && <p className="text-gray-mid">{description}</p>}
+        <h3 className="header">{name}</h3>
+        {description && (
+          <p className="text-gray-mid text-base">{description}</p>
+        )}
       </div>
 
-      <div className='flex justify-between'>
+      <div className="flex justify-between">
         <div>{language}</div>
         <div>{stars} stars</div>
       </div>

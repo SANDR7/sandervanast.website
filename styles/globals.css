@@ -26,8 +26,12 @@ h2.header {
   @apply text-2xl md:text-[2rem] leading-10;
 }
 
+h3.header {
+  @apply text-3xl;
+}
+
 .Container {
-  @apply  max-w-3xl mx-auto px-6;
+  @apply  max-w-4xl mx-auto px-6;
 }
 
 .Row {
@@ -51,8 +55,8 @@ span {
 }
 
 .Card {
-  @apply break-all p-4 flex flex-col h-64 justify-between rounded-xl border-2 border-transparent hover:border-red;
+  @apply break-all transition-[border] transition-[transform] p-4 flex flex-col h-40 md:h-48 justify-between rounded-xl border-green border-b-4 hover:-translate-y-3;
 }
 .Card h3 {
-  @apply font-bold text-lg;
+  @apply font-bold text-xl;
 }
