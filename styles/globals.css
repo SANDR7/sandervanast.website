@@ -23,11 +23,11 @@ h1.header {
 }
 
 h2.header {
-  @apply text-xl md:text-2xl;
+  @apply text-2xl md:text-[2rem] leading-10;
 }
 
 .Container {
-  @apply flex flex-col justify-center items-start max-w-3xl mx-auto px-6;
+  @apply  max-w-3xl mx-auto px-6;
 }
 
 .Row {
@@ -35,7 +35,7 @@ h2.header {
 }
 
 .profile {
-  @apply grid sm:flex justify-evenly gap-10;
+  @apply grid sm:flex justify-start gap-10;
 }
 .profile p {
   @apply w-8/12;
@@ -51,7 +51,7 @@ span {
 }
 
 .Card {
-  @apply break-words p-4 w-1/3 flex flex-col h-64 justify-between rounded-xl border-2 border-transparent hover:border-red;
+  @apply break-all p-4 flex flex-col h-64 justify-between rounded-xl border-2 border-transparent hover:border-red;
 }
 .Card h3 {
   @apply font-bold text-lg;

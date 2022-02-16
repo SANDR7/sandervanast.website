@@ -16,7 +16,6 @@ const Home: NextPage = () => {
   return (
     <>
       <PageContainer>
-        <div className="Row">
           <Profile
             name="Sander van Ast"
             title="Frontend Designer"
@@ -24,8 +23,6 @@ const Home: NextPage = () => {
             avatar="https://github.com/SANDR7.png"
             portrait="./portrait.png"
           />
-        </div>
-        <div className="Row">
           <Row
             title="Currently working on"
             linkNewTab
@@ -34,7 +31,7 @@ const Home: NextPage = () => {
               url: 'https://github.com/SANDR7?tab=repositories'
             }}
           >
-            <div className="flex gap-4 flex-col md:flex-row">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {github ? (
                 github.latest_repos.map((repo: repoProps, idx: number) => (
                   <RepositoryCard
@@ -53,7 +50,6 @@ const Home: NextPage = () => {
               )}
             </div>
           </Row>
-        </div>
       </PageContainer>
     </>
   );
