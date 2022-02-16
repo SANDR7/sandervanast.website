@@ -38,6 +38,14 @@ h3.header {
   @apply py-12;
 }
 
+#skip {
+  scroll-margin-top: 1.125rem;
+}
+
+.skip {
+  @apply absolute transform p-4 Card focus:translate-y-6 -translate-x-[110%] -translate-y-full;
+}
+
 .profile {
   @apply grid sm:flex justify-start md:justify-center gap-10 py-10;
 }
@@ -54,9 +62,9 @@ span {
   @apply text-base md:text-lg;
 }
 
-.Card {
+.Row .Card {
   @apply break-all transition-[border] transition-[transform] p-4 flex flex-col h-40 md:h-48 justify-between rounded-xl border-green border-b-4 hover:-translate-y-3;
 }
-.Card h3 {
+.Row .Card h3 {
   @apply font-bold text-xl;
 }
