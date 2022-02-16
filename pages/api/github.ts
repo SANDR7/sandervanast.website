@@ -38,7 +38,7 @@ export default async function handler(
 
     return res.status(200).json({
         username: user.login,
-        follower: user.followers,
+        followers: user.followers,
         public_repos: user.public_repos,
         latest_repos,
     });

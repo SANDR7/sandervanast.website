@@ -7,13 +7,12 @@ import PageContainer from '../layout/Main';
 import Row from '../layout/Row';
 
 // utils
-import useSWR from 'swr';
 import { repoProps } from '../types/repos';
+import GithubData from '../components/data/github';
 
 const Home: NextPage = () => {
-  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+  const github = GithubData();
 
-  const { data } = useSWR('/api/github', fetcher);
   return (
     <>
       <PageContainer>
@@ -36,8 +35,8 @@ const Home: NextPage = () => {
             }}
           >
             <div className="flex gap-4 flex-col md:flex-row">
-              {data ? (
-                data.latest_repos.map((repo: repoProps, idx: number) => (
+              {github ? (
+                github.latest_repos.map((repo: repoProps, idx: number) => (
                   <RepositoryCard
                     key={idx}
                     language={repo.language}
