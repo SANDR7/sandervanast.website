@@ -43,7 +43,7 @@ const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
 </div>
     
 
-      <main className='Container'>{children}</main>
+      <main id='skip' className='Container'>{children}</main>
     </>
   );
 };
