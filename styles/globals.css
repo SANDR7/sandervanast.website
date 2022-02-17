@@ -38,8 +38,16 @@ h3.header {
   @apply py-12;
 }
 
+#skip {
+  scroll-margin-top: 1.125rem;
+}
+
+.skip {
+  @apply absolute transform p-4 Card focus:translate-y-6 -translate-x-[110%] -translate-y-full;
+}
+
 .profile {
-  @apply grid sm:flex justify-start gap-10;
+  @apply grid sm:flex justify-start md:justify-center gap-10 py-10;
 }
 .profile p {
   @apply w-8/12;
