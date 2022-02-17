@@ -1,19 +1,18 @@
 import matter from 'gray-matter';
-import path from 'path';
 import React from 'react';
-import fs from 'fs';
 import PageContainer from '../../layout/Main';
-import { POSTS_PATH, postFilePaths } from '../../utils/mdx';
+import { postFilePaths, getFilePath, getSource } from '../../utils/mdx';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MDXRemote } from 'next-mdx-remote';
+import { postProp } from '../../types/posts';
 
 export const Story = ({
   source,
   frontMatter
 }: {
   source: any;
-  frontMatter: any;
+  frontMatter: postProp;
 }) => {
   return (
     <PageContainer>
@@ -26,8 +25,8 @@ export const Story = ({
 export default Story;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params?.slug}.mdx`);
-  const source = fs.readFileSync(postFilePath);
+  const postFilePath = getFilePath(`${params?.slug}.mdx`);
+  const source = getSource(postFilePath);
 
   const { content, data } = matter(source);
 

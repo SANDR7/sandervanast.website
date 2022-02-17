@@ -1,20 +1,25 @@
 import matter from 'gray-matter';
-import path from 'path';
-import fs from 'fs';
 import React from 'react';
 import PageContainer from '../layout/Main';
-import { postFilePaths, POSTS_PATH } from '../utils/mdx';
+import { getSource, postFilePaths, POSTS_PATH } from '../utils/mdx';
+import { NextPage } from 'next';
+import { postProps } from '../types/posts';
 
-const Journal = ({ posts }: { posts: any }) => {
-  console.log(posts);
-
-  return <PageContainer>Stories?</PageContainer>;
+const Journal: NextPage<postProps> = ({ posts }) => {
+  return (
+    <PageContainer>
+      {posts &&
+        posts.map((item, idx: number) => (
+          <div key={idx}>{item.data.title}</div>
+        ))}
+    </PageContainer>
+  );
 };
 export default Journal;
 
 export function getStaticProps() {
   const posts = postFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+    const source = getSource(filePath);
     const { content, data } = matter(source);
 
     return {
