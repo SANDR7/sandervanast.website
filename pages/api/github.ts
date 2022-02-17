@@ -29,6 +29,7 @@ export default async function handler(
         topics: repo.topics,
         html_url: repo.html_url,
         stargazers_count: repo.stargazers_count,
+        homepage: repo.homepage
     }));
 
     res.setHeader(
