@@ -1,6 +1,6 @@
 // next
 import type { NextPage } from 'next';
-import Profile from '../components/Profile';
+import Hero from '../components/Hero';
 import RepositoryCard from '../components/RepositoryCard';
 // layouts
 import PageContainer from '../layout/Main';
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <>
       <PageContainer>
-        <Profile
+        <Hero
           name="Sander van Ast"
           title="Frontend Designer"
           bio="Developing a solution for You"
@@ -52,6 +52,9 @@ const Home: NextPage = () => {
               <p>loading...</p>
             )}
           </div>
+        </Row>
+        <Row title='Also interested in' link={{name: 'See all Journal posts', url: '/journal'}}>
+
         </Row>
       </PageContainer>
     </>
