@@ -9,5 +9,6 @@ export interface postProp {
     date: string;
     description: string;
     thumbnailUrl: string;
+    category: "Graphic Design" | "Technology" | "Strategy" | "Development";
     tags: string[];
 }
