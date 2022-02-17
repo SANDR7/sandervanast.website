@@ -44,6 +44,7 @@ const Home: NextPage = () => {
                     description={repo.description}
                     name={repo.name}
                     html_url={repo.html_url}
+                    homepage={repo.homepage}
                     stargazers_count={repo.stargazers_count}
                   />
                 ))

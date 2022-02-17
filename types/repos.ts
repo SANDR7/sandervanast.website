@@ -5,5 +5,6 @@ export interface repoProps {
     description: string;
     html_url: string;
     stargazers_count: number;
+    homepage: string;
     topics: [];
 }
