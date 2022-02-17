@@ -82,7 +82,7 @@ const Navigation: FC = () => {
 
         <nav className="flex gap-x-1">
           <NavItem href="/" text="Home" />
-          <NavItem href="/blogs" text="Blogs" />
+          <NavItem href="/journal" text="Journal" />
         </nav>
       </div>
     </>
