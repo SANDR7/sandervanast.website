@@ -3,12 +3,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:watch": "next-remote-watch ./blog/data",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "12.0.10",
+    "next-mdx-remote": "^3.0.8",
+    "next-remote-watch": "^1.0.0",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
     "react-dom": "17.0.2",
