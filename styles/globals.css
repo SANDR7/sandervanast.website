@@ -30,12 +30,16 @@ h3.header {
   @apply text-3xl;
 }
 
+header {
+  @apply pt-2 pb-10;
+}
+
 .Container {
   @apply  max-w-4xl mx-auto px-6;
 }
 
 .Row {
-  @apply py-12;
+  @apply py-6 pb-12;
 }
 
 #skip {
@@ -43,13 +47,13 @@ h3.header {
 }
 
 .skip {
-  @apply absolute transform p-4 Card focus:translate-y-6 -translate-x-[110%] -translate-y-full;
+  @apply absolute transform p-4 Card focus:translate-y-6 -translate-x-[110%] -translate-y-[130%];
 }
 
-.profile {
-  @apply grid sm:flex justify-start md:justify-center gap-10 py-10;
+.hero {
+  @apply grid grid-cols-1 md:grid-cols-3 md:justify-items-stretch gap-4 mb-10;
 }
-.profile p {
+.hero p {
   @apply w-8/12;
 }
 
@@ -63,7 +67,7 @@ span {
 }
 
 .Row .Card {
-  @apply break-words transition-transform p-4 flex flex-col h-40 md:h-48 justify-between rounded-xl border-green border-b-4 hover:scale-95;
+  @apply break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-green border-b-4 hover:scale-95;
 }
 .Row .Card h3 {
   @apply font-bold text-xl mb-2;
