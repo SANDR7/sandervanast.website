@@ -9,7 +9,6 @@ interface MainProps {
 }
 
 const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
-
   const meta = {
     title: 'Sander van Ast — Developer & Designer',
     description: `Typescript enthusiast, Graphic Designer, and open minded.`,
@@ -38,12 +37,13 @@ const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-<div className='Container'>
-      <Navigation/>
-</div>
-    
+      <header className="Container">
+        <Navigation />
+      </header>
 
-      <main id='skip' className='Container'>{children}</main>
+      <main id="skip" className="Container">
+        {children}
+      </main>
     </>
   );
 };
