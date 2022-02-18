@@ -4,37 +4,33 @@ import matter from 'gray-matter';
 
 // layout
 import PageContainer from '../../layout/Main';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 
 // utils
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 
 import { postProp } from '../../types/posts';
-import { postFilePaths, getFilePath, getSource } from '../../utils/mdx';
+import { getFilePath, getSource } from '../../utils/mdx';
+import PostContainer from '../../layout/Post';
 
 export const Story = ({
   source,
-  frontMatter
+  post
 }: {
   source: any;
-  frontMatter: postProp;
+  post: postProp;
 }) => {
   return (
-    <PageContainer {...frontMatter}>
-
-      <h1 className='header'>
-
-      {frontMatter.title}
-      </h1>
+    <PostContainer post={post}>
       <MDXRemote {...source} />
-    </PageContainer>
+    </PostContainer>
   );
 };
 
 export default Story;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const postFilePath = getFilePath(`${params?.slug}.mdx`);
   const source = getSource(postFilePath);
 
@@ -52,18 +48,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       source: mdxSource,
-      frontMatter: data
-    }
+      post: data
+    },
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = postFilePaths
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    .map((slug) => ({ params: { slug } }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const paths = postFilePaths
+//     .map((path) => path.replace(/\.mdx?$/, ''))
+//     .map((slug) => ({ params: { slug } }));
 
-  return {
-    paths,
-    fallback: false
-  };
-};
+//   return {
+//     paths,
+//     fallback: false
+//   };
+// };
