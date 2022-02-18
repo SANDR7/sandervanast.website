@@ -1,10 +1,11 @@
 import matter from 'gray-matter';
 import React from 'react';
 import PageContainer from '../layout/Main';
-import { getSource, postFilePaths } from '../utils/mdx';
+import { getSources, postFilePaths } from '../utils/mdx';
 import { NextPage } from 'next';
 import { postProps } from '../types/posts';
 import Hero from '../components/Hero';
+import Link from 'next/link';
 
 const Journal: NextPage<postProps> = ({ posts }) => {
   return (
@@ -16,28 +17,39 @@ const Journal: NextPage<postProps> = ({ posts }) => {
             let categoryColor = '';
             switch (item.data.category) {
               case 'Development':
-                categoryColor = 'bg-orange';
+                categoryColor = 'border-l-orange';
                 break;
               case 'Graphic Design':
-                categoryColor = 'bg-blue';
+                categoryColor = 'border-l-blue';
                 break;
               case 'Strategy':
-                categoryColor = 'bg-red';
+                categoryColor = 'border-l-red';
                 break;
               case 'Technology':
-                categoryColor = 'bg-green';
+                categoryColor = 'border-l-green';
                 break;
               default:
-                categoryColor = 'bg-transparent'
+                categoryColor = 'border-l-transparent';
                 break;
             }
             return (
-              <div key={idx} className="Card p-4 rounded-lg">
-                <div>
-                  <div className={`${categoryColor} rounded-md text-gray-light p-2 my-2 w-min`}>{item.data.category}</div>
-                </div>
-                <h2 className="header">{item.data.title}</h2>
-              </div>
+              <Link key={idx} href={`journal/${item?.filePath.replace(/\.mdx?$/, '')}`} passHref>
+                <a>
+                  <div className="p-4">
+                    <span>
+                      <div
+                        className={`${categoryColor} border-transparent border rounded-md p-2 py-1 my-2 w-min`}
+                      >
+                        {item.data.category}
+                      </div>
+                    </span>
+                    <div className="">
+                      <h2 className="header">{item.data.title}</h2>
+                      <p className="text-gray-mid">{item.data.description}</p>
+                    </div>
+                  </div>
+                </a>
+              </Link>
             );
           })}
       </div>
@@ -48,7 +60,7 @@ export default Journal;
 
 export const getStaticProps = () => {
   const posts = postFilePaths.map((filePath) => {
-    const source = getSource(filePath);
+    const source = getSources(filePath);
     const { content, data } = matter(source);
 
     return {

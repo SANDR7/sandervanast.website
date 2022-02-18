@@ -1,11 +1,17 @@
-import matter from 'gray-matter';
+// next
 import React from 'react';
+import matter from 'gray-matter';
+
+// layout
 import PageContainer from '../../layout/Main';
-import { postFilePaths, getFilePath, getSource } from '../../utils/mdx';
 import { GetStaticPaths, GetStaticProps } from 'next';
+
+// utils
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+
 import { postProp } from '../../types/posts';
+import { postFilePaths, getFilePath, getSource } from '../../utils/mdx';
 
 export const Story = ({
   source,

@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
-export const POSTS_PATH = path.join(process.cwd(), 'data/posts');
+export const POSTS_PATH = path.join(process.cwd(), 'data\\posts');
 
-export const getSource = (file_path: string) => fs.readFileSync(path.join(POSTS_PATH, file_path));
+export const getSources = (file_path: string) => fs.readFileSync(path.join(POSTS_PATH, file_path));
+export const getSource = (file_path: string) => fs.readFileSync(path.join( file_path));
 
 export const getFilePath = (file_path: string) => path.join(POSTS_PATH, file_path);
 
