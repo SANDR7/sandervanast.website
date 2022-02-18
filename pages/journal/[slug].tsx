@@ -21,8 +21,12 @@ export const Story = ({
   frontMatter: postProp;
 }) => {
   return (
-    <PageContainer>
+    <PageContainer {...frontMatter}>
+
+      <h1 className='header'>
+
       {frontMatter.title}
+      </h1>
       <MDXRemote {...source} />
     </PageContainer>
   );

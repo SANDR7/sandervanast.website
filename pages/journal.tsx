@@ -10,12 +10,17 @@ import Link from 'next/link';
 const Journal: NextPage<postProps> = ({ posts }) => {
   return (
     <PageContainer>
-      <Hero name="My Collection" bio="something" />
+      <Hero
+        name="My Collection"
+        bio="Here is were I keep my deepest secrets and interesting stories that I might share"
+      />
       <div className="grid gap-10">
         {posts &&
-          posts.map(({ data: item }, idx: number) => {
+          posts.map((item, idx: number) => {
+            const { data: post } = item;
+
             let categoryColor = '';
-            switch (item.category) {
+            switch (post.category) {
               case 'Development':
                 categoryColor = 'border-l-orange';
                 break;
@@ -35,21 +40,21 @@ const Journal: NextPage<postProps> = ({ posts }) => {
             return (
               <Link
                 key={idx}
-                href={`/journal/${item?.filePath.replace(/\.mdx?$/, '')}`}
+                href={`/journal/${item?.filePath?.replace(/\.mdx?$/, '')}`}
                 passHref
               >
                 <a>
-                  <div className="p-4">
+                  <div>
                     <span>
                       <div
-                        className={`${categoryColor} border-transparent border rounded-md p-2 py-1 my-2 w-min`}
+                        className={`${categoryColor} border-transparent border-2 rounded-lg p-2 py-1 my-2 w-full`}
                       >
-                        {item.category}
+                        {post.category}
                       </div>
                     </span>
                     <div>
-                      <h2 className="header">{item.title}</h2>
-                      <p className="text-gray-mid">{item.description}</p>
+                      <h3 className="header">{post.title}</h3>
+                      <p className="text-gray-mid">{post.description}</p>
                     </div>
                   </div>
                 </a>
