@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <Hero
           name="Sander van Ast"
           title="Web Designer, Developer and Consumer"
-          bio="Developing a solution for You"
+          description="Developing a solution for You"
           avatar="https://github.com/SANDR7.png"
           portrait="/portrait.png"
         />

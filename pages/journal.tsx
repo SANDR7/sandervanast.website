@@ -12,7 +12,7 @@ const Journal: NextPage<postProps> = ({ posts }) => {
     <PageContainer>
       <Hero
         name="My Collection"
-        bio="Here is were I keep my deepest secrets and interesting stories that I might share"
+        description="Here is were I keep my deepest secrets and interesting stories that I might share"
       />
       <div className="grid gap-10">
         {posts &&
