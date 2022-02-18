@@ -18,10 +18,10 @@ const Home: NextPage = () => {
       <PageContainer>
         <Hero
           name="Sander van Ast"
-          title="Frontend Designer"
+          title="Web Designer, Developer and Consumer"
           bio="Developing a solution for You"
           avatar="https://github.com/SANDR7.png"
-          portrait="./portrait.png"
+          portrait="/portrait.png"
         />
         <Row
           title="Currently working on"
@@ -53,9 +53,11 @@ const Home: NextPage = () => {
             )}
           </div>
         </Row>
-        <Row title='Also interested in' link={{name: 'See all Journal posts', url: '/journal'}}>
-
-        </Row>
+        <Row
+          title="Also interested in"
+          description="some description"
+          link={{ name: 'See all Journal posts', url: '/journal' }}
+        >child</Row>
       </PageContainer>
     </>
   );

@@ -13,9 +13,9 @@ const Journal: NextPage<postProps> = ({ posts }) => {
       <Hero name="My Collection" bio="something" />
       <div className="grid gap-10">
         {posts &&
-          posts.map((item, idx: number) => {
+          posts.map(({ data: item }, idx: number) => {
             let categoryColor = '';
-            switch (item.data.category) {
+            switch (item.category) {
               case 'Development':
                 categoryColor = 'border-l-orange';
                 break;
@@ -33,19 +33,23 @@ const Journal: NextPage<postProps> = ({ posts }) => {
                 break;
             }
             return (
-              <Link key={idx} href={`journal/${item?.filePath.replace(/\.mdx?$/, '')}`} passHref>
+              <Link
+                key={idx}
+                href={`/journal/${item?.filePath.replace(/\.mdx?$/, '')}`}
+                passHref
+              >
                 <a>
                   <div className="p-4">
                     <span>
                       <div
                         className={`${categoryColor} border-transparent border rounded-md p-2 py-1 my-2 w-min`}
                       >
-                        {item.data.category}
+                        {item.category}
                       </div>
                     </span>
-                    <div className="">
-                      <h2 className="header">{item.data.title}</h2>
-                      <p className="text-gray-mid">{item.data.description}</p>
+                    <div>
+                      <h2 className="header">{item.title}</h2>
+                      <p className="text-gray-mid">{item.description}</p>
                     </div>
                   </div>
                 </a>
