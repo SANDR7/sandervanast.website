@@ -35,11 +35,10 @@ const Navigation: FC = () => {
 
   return (
     <>
-        <a href="#skip" className="skip">
-          Skip to content
-        </a>
+      <a href="#skip" className="skip">
+        Skip to content
+      </a>
       <div className="flex justify-between py-4 items-center">
-
         <button
           className="p-2 Card rounded-lg"
           aria-label="Toggle Dark Mode"
@@ -82,7 +81,7 @@ const Navigation: FC = () => {
 
         <nav className="flex gap-x-1">
           <NavItem href="/" text="Home" />
-          <NavItem href="/blogs" text="Blogs" />
+          <NavItem href="/journal" text="Journal" />
         </nav>
       </div>
     </>

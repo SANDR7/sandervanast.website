@@ -6,10 +6,13 @@ interface MainProps {
   children: ReactNode;
   title?: string;
   description?: string;
+  image?: string;
+  type?: string;
+  date?: string;
 }
 
-const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
-
+const PageContainer: FC<MainProps> = (props) => {
+  const { children, ...customMeta } = props;
   const meta = {
     title: 'Sander van Ast — Developer & Designer',
     description: `Typescript enthusiast, Graphic Designer, and open minded.`,
@@ -36,14 +39,18 @@ const PageContainer: FC<MainProps> = ({ children, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        {meta.date && (
+          <meta property="article:published_time" content={meta.date} />
+        )}
       </Head>
 
-<div className='Container'>
-      <Navigation/>
-</div>
-    
+      <header className="Container">
+        <Navigation />
+      </header>
 
-      <main id='skip' className='Container'>{children}</main>
+      <main id="skip" className="Container">
+        {children}
+      </main>
     </>
   );
 };
