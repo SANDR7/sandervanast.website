@@ -6,12 +6,13 @@ import { NextPage } from 'next';
 import { postProps } from '../types/posts';
 import Hero from '../components/Hero';
 import Link from 'next/link';
+import { catColor } from '../utils/catColor';
 
 const Journal: NextPage<postProps> = ({ posts }) => {
   return (
     <PageContainer>
       <Hero
-        name="My Collection"
+        name="My journal stories"
         description="Here is were I keep my deepest secrets and interesting stories that I might share"
       />
       <div className="grid gap-10">
@@ -19,24 +20,7 @@ const Journal: NextPage<postProps> = ({ posts }) => {
           posts.map((item, idx: number) => {
             const { data: post } = item;
 
-            let categoryColor = '';
-            switch (post.category) {
-              case 'Development':
-                categoryColor = 'border-l-orange';
-                break;
-              case 'Graphic Design':
-                categoryColor = 'border-l-blue';
-                break;
-              case 'Strategy':
-                categoryColor = 'border-l-red';
-                break;
-              case 'Technology':
-                categoryColor = 'border-l-green';
-                break;
-              default:
-                categoryColor = 'border-l-transparent';
-                break;
-            }
+            let categoryColor = catColor(post.category);
             return (
               <Link
                 key={idx}
