@@ -84,9 +84,9 @@ const Home: NextPage = () => {
         title='You can contact my for'
         link={{url: 'mailto:contact@sandervanast.info', name: 'contact@sandervanast.info'}}
         >
-          {services && services.services.map((item: any,idx: number) => (
+          {services && services.services.map((item ,idx: number) => (
             <div key={idx}>
-              {idx + 1} - {item.text}
+              0{idx + 1} - {item.text}
             </div>
           ))}
         </Row>
