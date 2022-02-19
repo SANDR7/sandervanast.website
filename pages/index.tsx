@@ -10,9 +10,11 @@ import Row from '../layout/Row';
 import { repoProps } from '../types/repos';
 import GithubData from '../components/data/github';
 import Card from '../components/Card';
+import ServiceData from '../components/data/services';
 
 const Home: NextPage = () => {
   const github = GithubData();
+  const services = ServiceData();
 
   return (
     <>
@@ -77,6 +79,16 @@ const Home: NextPage = () => {
               image={{ url: '/static/images/banner.png', alt: 'banner' }}
             />
           </div>
+        </Row>
+        <Row
+        title='You can contact my for'
+        link={{url: 'mailto:contact@sandervanast.info', name: 'contact@sandervanast.info'}}
+        >
+          {services && services.services.map((item: any,idx: number) => (
+            <div key={idx}>
+              {idx + 1} - {item.text}
+            </div>
+          ))}
         </Row>
       </PageContainer>
     </>
