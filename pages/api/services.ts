@@ -14,6 +14,10 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
             text: 'Technology',
             explanation: "A web app is a  websites that can be download to a desktop and/or smartphones and is in my opinion the future of web development. The website is than almost transform into a native app how you see them in the app store."
         },
+        {
+            text: 'Nerd Talk ... ( Tech, Keyboards, Cubes ) ',
+            explanation: ""
+        },
     ]
 
 

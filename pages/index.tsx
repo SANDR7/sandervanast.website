@@ -11,6 +11,7 @@ import { repoProps } from '../types/repos';
 import GithubData from '../components/data/github';
 import Card from '../components/Card';
 import ServiceData from '../components/data/services';
+import { ServiceAccordion } from '../components/ServiceAccordion';
 
 const Home: NextPage = () => {
   const github = GithubData();
@@ -85,9 +86,9 @@ const Home: NextPage = () => {
         link={{url: 'mailto:contact@sandervanast.info', name: 'contact@sandervanast.info'}}
         >
           {services && services.services.map((item ,idx: number) => (
-            <div key={idx}>
-              0{idx + 1} - {item.text}
-            </div>
+            <ul key={idx}>
+              <ServiceAccordion title={item.text} content={item.explanation}/>
+            </ul>
           ))}
         </Row>
       </PageContainer>

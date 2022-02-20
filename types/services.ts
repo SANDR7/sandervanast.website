@@ -1,4 +1,6 @@
+import { category } from "../utils/catColor";
+
 export interface ServiceProp {
-    text: string;
+    text: category;
     explanation: string;
 }
