@@ -24,11 +24,11 @@ export const ServiceAccordion: FC<AccordionProps> = ({ title, content }) => {
   return (
     <li className={`flex flex-col border-y-4 rounded-lg my-8 border-y-gray-mid`}>
       <button
-        className="py-6 box-border appearance-none cursor-pointer px-4 flex items-center justify-between"
+        className="py-4 box-border appearance-none cursor-pointer px-4 flex items-center justify-between"
         onClick={toggleAccordion}
       >
 
-        <h4 className="header ">{title}</h4>
+        <h3 className="font-semibold text-2xl">{title}</h3>
         {/* <img
           alt="Chevron icon"
           className={`${rotate} inline-block`}

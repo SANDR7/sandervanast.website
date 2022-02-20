@@ -20,7 +20,7 @@ const Card: FC<CardProps> = ({ title, image, postCount }) => {
       <a className={`rounded-lg border-l-4 ${color} p-3`}>
         <div>
           <div className="flex justify-between">
-            <h4 className="header pb-2">{title}</h4>
+            <h3 className="header pb-2">{title}</h3>
             <span>{postCount || '0'} Posts</span>
           </div>
           {image && (

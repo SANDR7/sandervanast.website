@@ -65,19 +65,19 @@ const Home: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
             <Card
               title="Development"
-              image={{ url: '/static/images/banner.png', alt: 'banner' }}
+              image={{ url: 'https://github.com/SANDR7.png', alt: 'banner' }}
             />
             <Card
               title="Strategy"
-              image={{ url: '/static/images/banner.png', alt: 'banner' }}
+              image={{ url: 'https://github.com/SANDR7.png', alt: 'banner' }}
             />
             <Card
               title="Graphic Design"
-              image={{ url: '/static/images/banner.png', alt: 'banner' }}
+              image={{ url: 'https://github.com/SANDR7.png', alt: 'banner' }}
             />
             <Card
               title="Technology"
-              image={{ url: '/static/images/banner.png', alt: 'banner' }}
+              image={{ url: 'https://github.com/SANDR7.png', alt: 'banner' }}
             />
           </div>
         </Row>
