@@ -1,10 +1,12 @@
-import React from 'react';
 import useSWR from 'swr';
 import fetcher from '../../lib/fetcher';
-import { repoProps } from '../../types/repos';
 
 const GithubData = () => {
-  const { data } = useSWR<{latest_repos: [], username: string, followers: number }>('/api/github', fetcher);
+  const { data } = useSWR<{
+    latest_repos: [];
+    username: string;
+    followers: number;
+  }>('/api/github', fetcher);
   const repoData = data;
   return repoData;
 };
