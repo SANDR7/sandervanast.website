@@ -32,6 +32,10 @@ const Hero: FC<ProfileProps> = ({
               priority
               title={`Portrait of ${name}`}
               alt={`${name} portrait`}
+              objectFit="cover"
+              objectPosition="center -1.5rem"
+              className='rounded-full'
+
             />
           </div>
         </a>
