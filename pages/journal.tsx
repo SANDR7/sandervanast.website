@@ -38,7 +38,7 @@ const Journal: NextPage<postProps> = ({ posts }) => {
                     </span>
                     <div>
                       <h3 className="header">{post.title}</h3>
-                      <p className="text-gray-mid">{post.description}</p>
+                      <p className="textMidGray">{post.description}</p>
                     </div>
                   </div>
                 </a>
