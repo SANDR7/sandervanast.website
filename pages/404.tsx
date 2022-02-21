@@ -9,7 +9,7 @@ const Custom404 = () => {
       <Row title="404 found">
         <p className="textMidGray w-1/2">
           Well... You discoverd the 404 page. How did you get here? What was the
-          reason to go this path? Because there is nothing interested here...
+          reason to go this path? Because there is nothing interesting here...
         </p>
       </Row>
       <button className="flex justify-center w-full">
