@@ -17,7 +17,7 @@ const NavItem: FC<NavItemProps> = ({ href, text }) => {
     <Link href={href} passHref>
       <a
         className={`py-2 px-4  hover:Card rounded-lg ${
-          isActive ? 'font-semibold' : 'text-gray-mid'
+          isActive ? 'font-semibold' : 'textMidGray'
         }`}
       >
         {text}
