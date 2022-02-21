@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React, { FC, ReactNode } from 'react';
+import Footer from './Footer';
 import Navigation from './Navigation';
 
 interface MainProps {
@@ -51,6 +52,10 @@ const PageContainer: FC<MainProps> = (props) => {
       <main id="skip" className="Container">
         {children}
       </main>
+
+      <footer className='Container'>
+        <Footer/>
+      </footer>
     </>
   );
 };
