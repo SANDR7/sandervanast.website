@@ -84,6 +84,11 @@ a {
   cursor: pointer;
 }
 
+footer a {
+  @apply  hover:text-gray transition text-left;
+
+}
+
 p,
 span {
   @apply text-base md:text-lg;
