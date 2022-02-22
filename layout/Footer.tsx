@@ -15,6 +15,22 @@ const ExternalLink: FC<LinkProps> = ({ href, children }) => (
   </a>
 );
 
+const Status: FC<{ title: string; iconStyle: string; text: string }> = ({
+  title,
+  iconStyle,
+  text
+}) => {
+  return (
+    <div className="gap-2 flex">
+      <i className={iconStyle}></i>
+      <div className="hidden sm:flex flex-col">
+        <span className="font-semibold text-xl">{title}</span>
+        <span className="font-thin">{text}</span>
+      </div>
+    </div>
+  );
+};
+
 export const Footer = () => {
   const isAvailable = true;
 
@@ -25,31 +41,21 @@ export const Footer = () => {
       <div className="my-10 flex justify-between">
         <div>
           {isAvailable ? (
-            <div className="flex gap-2">
-              <i className="fa-solid fa-square-check text-2xl pt-1 text-green"></i>
-              <div className="flex flex-col">
-                <span className="font-semibold text-xl">
-                  Available to create!
-                </span>
-                <span className='font-thin'>For everyone</span>
-              </div>
-            </div>
+            <Status
+              title="Available to create!"
+              iconStyle="fa-solid fa-square-check text-2xl pt-1 text-green"
+              text="For everyone"
+            />
           ) : (
-            <div className="flex gap-2">
-              <i className="fa-solid fa-square-xmark text-2xl pt-1 text-red"></i>
-              <div className="flex flex-col">
-                <span className="font-semibold text-xl">
-                  Currently creating
-                </span>
-                <span className='font-thin'>
-                  For <ExternalLink href="">@someone</ExternalLink>
-                </span>
-              </div>
-            </div>
+            <Status
+              title="Currently creating"
+              text="For @someone"
+              iconStyle="fa-solid fa-square-xmark text-2xl pt-1 text-red"
+            />
           )}
         </div>
         <div>
-          <NowPlaying/>
+          <NowPlaying />
         </div>
       </div>
 
