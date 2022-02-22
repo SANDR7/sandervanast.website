@@ -18,14 +18,16 @@ const RepositoryCard: FC<repoProps> = ({
         <h3 className="header">
           {homepage ? (
             <Link href={homepage} passHref>
-              <a target="_blank" rel="noreferrer">{name}</a>
+              <a target="_blank" rel="noreferrer">
+                {name}
+              </a>
             </Link>
           ) : (
             name
           )}
         </h3>
         {description && (
-          <p className="text-gray-mid text-base">{description}</p>
+          <p className="textMidGray text-base">{description}</p>
         )}
       </div>
 

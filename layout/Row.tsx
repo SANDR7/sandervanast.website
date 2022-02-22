@@ -21,7 +21,9 @@ const Row: FC<RowProps> = ({
 }) => (
   <div className="Row">
     <h2 className="header">{title}...</h2>
-    {description && <p className="text-gray-mid pb-4 md:w-2/3">{description}</p>}
+    {description && (
+      <p className="textMidGray pb-4 md:w-2/3">{description}</p>
+    )}
     {link && (
       <span className="group flex items-center">
         <Link href={link.url} passHref>

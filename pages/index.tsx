@@ -12,6 +12,7 @@ import GithubData from '../components/data/github';
 import Card from '../components/Card';
 import ServiceData from '../components/data/services';
 import { ServiceAccordion } from '../components/ServiceAccordion';
+import QuoteCard from '../components/QuoteCard';
 
 const Home: NextPage = () => {
   const github = GithubData();
@@ -82,14 +83,27 @@ const Home: NextPage = () => {
           </div>
         </Row>
         <Row
-        title='You can contact my for'
-        link={{url: 'mailto:contact@sandervanast.info', name: 'contact@sandervanast.info'}}
+          title="You can contact my for"
+          link={{
+            url: 'mailto:contact@sandervanast.info',
+            name: 'contact@sandervanast.info'
+          }}
         >
-          {services && services.services.map((item ,idx: number) => (
-            <ul key={idx}>
-              <ServiceAccordion title={item.text} content={item.explanation}/>
-            </ul>
-          ))}
+          {services &&
+            services.services.map((item, idx: number) => (
+              <ul key={idx}>
+                <ServiceAccordion
+                  title={item.text}
+                  content={item.explanation}
+                />
+              </ul>
+            ))}
+        </Row>
+        <Row title="Don't forget this">
+          <QuoteCard
+            author="Truman Burbank"
+            text="In case I don't see ya... good afternoon, good evening and good night"
+          />
         </Row>
       </PageContainer>
     </>

@@ -9,6 +9,10 @@
     font-family: 'Rubik', sans-serif;
   }
 
+  .textMidGray {
+    @apply text-gray-mid-light dark:text-gray-mid-dark;
+  }
+
   .Card {
     @apply transition-[background-color] bg-gray-lighter text-clip dark:bg-gray-darker;
   }
@@ -39,22 +43,22 @@ header {
 /* Colors */
 
 .red {
-@apply border-l-red;
+  @apply border-l-red;
 }
 
 .orange {
-@apply border-l-orange;
+  @apply border-l-orange;
 }
 .green {
-@apply border-l-green;
+  @apply border-l-green;
 }
 
 .blue {
-@apply border-l-blue;
+  @apply border-l-blue;
 }
 
 .Container {
-  @apply  max-w-4xl mx-auto px-6;
+  @apply max-w-4xl mx-auto px-6;
 }
 
 .Row {
@@ -80,13 +84,18 @@ a {
   cursor: pointer;
 }
 
+footer a {
+  @apply  hover:text-gray transition text-left;
+
+}
+
 p,
 span {
   @apply text-base md:text-lg;
 }
 
 .Row .Card {
-  @apply break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid border-b-4 hover:scale-95;
+  @apply break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid-light dark:border-gray-mid-dark border-b-4 hover:scale-95;
 }
 .Row .Card h3 {
   @apply font-bold text-xl mb-2;
