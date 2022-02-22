@@ -4,9 +4,14 @@ import { catColor, category } from '../utils/catColor';
 interface AccordionProps {
   title: category;
   content: React.ReactNode;
+  number: number;
 }
 
-export const ServiceAccordion: FC<AccordionProps> = ({ title, content }) => {
+export const ServiceAccordion: FC<AccordionProps> = ({
+  title,
+  content,
+  number
+}) => {
   const [active, setActive] = useState(false);
   const [height, setHeight] = useState('0px');
   const [rotate, setRotate] = useState('transform duration-700 ease');
@@ -27,13 +32,18 @@ export const ServiceAccordion: FC<AccordionProps> = ({ title, content }) => {
 
   return (
     <li
-      className={`flex flex-col border-y-4 rounded-lg my-8 border-y-gray-mid-light`}
+      className={`flex flex-col border-y-4 rounded-lg my-3 border-y-gray-mid-light`}
     >
       <button
-        className="py-6 box-border appearance-none cursor-pointer px-4 flex items-center justify-between"
+        className="py-4 box-border appearance-none cursor-pointer px-4 flex items-center justify-between"
         onClick={toggleAccordion}
       >
-        <h3 className="header">{title}</h3>
+        <div className='flex items-center'>
+          <span className='mr-10'>
+          0{number + 1}
+          </span>
+          <h3 className="text-xl">{title}</h3>
+        </div>
         {/* <img
           alt="Chevron icon"
           className={`${rotate} inline-block`}
