@@ -95,6 +95,7 @@ const Home: NextPage = () => {
                 <ServiceAccordion
                   title={item.text}
                   content={item.explanation}
+                  number={idx}
                 />
               </ul>
             ))}
