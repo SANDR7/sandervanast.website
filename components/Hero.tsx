@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
+import { ExternalLink } from '../utils/externalLink';
 
 interface ProfileProps {
   name: string;
@@ -19,11 +20,7 @@ const Hero: FC<ProfileProps> = ({
   <div className="hero">
     {portrait && (
       <div className="relative md:col-span-1">
-        <a
-          href="https://www.linkedin.com/in/sander-van-ast/"
-          target={'_blank'}
-          rel="noreferrer"
-        >
+        <ExternalLink href="https://www.linkedin.com/in/sander-van-ast/">
           <div className="md:w-64 w-44">
             <Image
               src={portrait}
@@ -34,12 +31,11 @@ const Hero: FC<ProfileProps> = ({
               alt={`${name} portrait`}
               objectFit="cover"
               objectPosition="center -1.5rem"
-              className='rounded-full'
-
+              className="rounded-full"
             />
           </div>
-        </a>
-        <a href="https://github.com/SANDR7" target={'_blank'} rel="noreferrer">
+        </ExternalLink>
+        <ExternalLink href="https://github.com/SANDR7">
           <div className="absolute bottom-0 left-0 md:w-24 w-20">
             <Image
               src={avatar}
@@ -49,7 +45,7 @@ const Hero: FC<ProfileProps> = ({
               alt={`${name} avatar`}
             />
           </div>
-        </a>
+        </ExternalLink>
       </div>
     )}
     <div className="md:col-span-2">

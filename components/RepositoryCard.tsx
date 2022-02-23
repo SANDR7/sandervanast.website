@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { repoProps } from '../types/repos';
+import { ExternalLink } from '../utils/externalLink';
 
 const RepositoryCard: FC<repoProps> = ({
   name,
@@ -17,18 +18,12 @@ const RepositoryCard: FC<repoProps> = ({
       <div>
         <h3 className="header">
           {homepage ? (
-            <Link href={homepage} passHref>
-              <a target="_blank" rel="noreferrer">
-                {name}
-              </a>
-            </Link>
+            <ExternalLink href={homepage}>{name}</ExternalLink>
           ) : (
             name
           )}
         </h3>
-        {description && (
-          <p className="textMidGray text-base">{description}</p>
-        )}
+        {description && <p className="textMidGray text-base">{description}</p>}
       </div>
 
       <div className="flex justify-between">

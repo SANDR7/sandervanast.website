@@ -1,19 +1,7 @@
-import matter from 'gray-matter';
 import Link from 'next/link';
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { NowPlaying } from '../components/NowPlaying';
-import { postFilePaths, getSources } from '../utils/mdx';
-
-interface LinkProps {
-  href: string;
-  children: ReactNode;
-}
-
-const ExternalLink: FC<LinkProps> = ({ href, children }) => (
-  <a target="_blank" rel="noopener noreferrer" href={href}>
-    {children}
-  </a>
-);
+import { ExternalLink } from '../utils/externalLink';
 
 const Status: FC<{ title: string; iconStyle: string; text: string }> = ({
   title,
