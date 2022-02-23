@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: 100 400 800 900;
+  font-weight: 100 900;
   font-display: optional;
-  src: url(/fonts/Rubik-VariableFont.ttf) format('truetype');
+  src: url(/fonts/rubik-var-font.woff2) format('woff2');
 }
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/rubik-var-font-italic.woff2) format('woff2');
+}
+
 
 @layer base {
   .textMidGray {
