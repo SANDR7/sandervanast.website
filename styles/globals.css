@@ -74,7 +74,7 @@ header {
 }
 
 .hero {
-  @apply grid grid-cols-1 md:grid-cols-3 md:justify-items-stretch gap-4 mb-10;
+  @apply grid grid-cols-1 md:grid-cols-3 md:justify-items-stretch gap-x-20 gap-y-4 mb-10;
 }
 .hero p {
   @apply w-8/12;

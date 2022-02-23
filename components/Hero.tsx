@@ -24,7 +24,7 @@ const Hero: FC<ProfileProps> = ({
           target={'_blank'}
           rel="noreferrer"
         >
-          <div className="md:w-64 w-80">
+          <div className="md:w-64 w-44">
             <Image
               src={portrait}
               height={256}
