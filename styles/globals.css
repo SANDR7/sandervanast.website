@@ -26,7 +26,7 @@
   }
 
   .Card {
-    @apply transition-[background-color] bg-gray-lighter text-clip dark:bg-gray-darker;
+    @apply transition-[background-color] bg-gray-lighter dark:bg-gray-darker;
   }
 }
 
@@ -106,7 +106,7 @@ span {
 }
 
 .Row .Card {
-  @apply break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid-light dark:border-gray-mid-dark border-b-4 hover:scale-95;
+  @apply  break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid-light dark:border-gray-mid-dark border-b-4 hover:scale-95;
 }
 .Row .Card h3 {
   @apply font-bold text-xl mb-2;
