@@ -1,5 +1,5 @@
 // next
-import type  NextPage from 'next';
+import  {NextPage} from 'next';
 import Hero from '../components/Hero';
 import RepositoryCard from '../components/RepositoryCard';
 // layouts

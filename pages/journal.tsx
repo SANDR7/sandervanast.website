@@ -2,13 +2,13 @@ import matter from 'gray-matter';
 import React from 'react';
 import PageContainer from '../layout/Main';
 import { getSources, postFilePaths } from '../utils/mdx';
-import NextPage from 'next';
+import { NextPage } from 'next';
 import { postProps } from '../types/posts';
 import Hero from '../components/Hero';
 import Link from 'next/link';
 import { catColor } from '../utils/catColor';
 
-const Journal: NextPage = ({ posts }: { posts: postProps[] }) => {
+const Journal: NextPage<{posts: postProps[]}> = ({ posts }: {posts: postProps[]}) => {
   return (
     <PageContainer title="Journal — Sander van Ast">
       <Hero
