@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    font-family: 'Rubik', sans-serif;
-  }
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 100 400 800 900;
+  font-display: optional;
+  src: url(/fonts/Rubik-VariableFont.ttf) format('truetype');
+}
 
+@layer base {
   .textMidGray {
     @apply text-gray-mid-light dark:text-gray-mid-dark;
   }
@@ -85,8 +87,7 @@ a {
 }
 
 footer a {
-  @apply  hover:text-gray transition text-left;
-
+  @apply hover:text-gray transition text-left;
 }
 
 p,
