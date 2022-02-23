@@ -1,20 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    font-family: 'Rubik', sans-serif;
-  }
 
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/rubik-var-font.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/rubik-var-font-italic.woff2) format('woff2');
+}
+
+
+@layer base {
   .textMidGray {
     @apply text-gray-mid-light dark:text-gray-mid-dark;
   }
 
   .Card {
-    @apply transition-[background-color] bg-gray-lighter text-clip dark:bg-gray-darker;
+    @apply transition-[background-color] bg-gray-lighter dark:bg-gray-darker;
   }
 }
 
@@ -74,7 +86,7 @@ header {
 }
 
 .hero {
-  @apply grid grid-cols-1 md:grid-cols-3 md:justify-items-stretch gap-4 mb-10;
+  @apply grid grid-cols-1 md:grid-cols-3 md:justify-items-stretch gap-x-20 gap-y-4 mb-10;
 }
 .hero p {
   @apply w-8/12;
@@ -85,8 +97,7 @@ a {
 }
 
 footer a {
-  @apply  hover:text-gray transition text-left;
-
+  @apply hover:text-gray transition text-left;
 }
 
 p,
@@ -95,7 +106,7 @@ span {
 }
 
 .Row .Card {
-  @apply break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid-light dark:border-gray-mid-dark border-b-4 hover:scale-95;
+  @apply  break-words transition-transform p-4 flex flex-col h-48 justify-between rounded-xl border-gray-mid-light dark:border-gray-mid-dark border-b-4 hover:scale-95;
 }
 .Row .Card h3 {
   @apply font-bold text-xl mb-2;

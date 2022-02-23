@@ -24,7 +24,7 @@ const Card: FC<CardProps> = ({ title, image, postCount }) => {
             <span>{postCount || '0'} Posts</span>
           </div>
           {image && (
-            <div className="h-48 w-full relative">
+            <div className="h-32 sm:h-48 w-full relative">
               <Image
                 src={image.url}
                 alt={image.alt}

@@ -38,11 +38,11 @@ export const ServiceAccordion: FC<AccordionProps> = ({
         className="py-4 box-border appearance-none cursor-pointer px-4 flex items-center justify-between"
         onClick={toggleAccordion}
       >
-        <div className='flex items-center'>
-          <span className='mr-10 text-gray-mid-light dark:text-gray-mid-dark'>
-          0{number + 1}
+        <div className="flex items-center">
+          <span className="mr-10 text-gray-mid-light dark:text-gray-mid-dark">
+            {number + 1 == 4 ? <>&infin;</> : `0${number + 1}`}
           </span>
-          <h3 className="text-xl">{title}</h3>
+          <h3 className="text-xl text-left">{title}</h3>
         </div>
         <i className={`fa-solid fa-angle-down ${rotate}`}></i>
       </button>
