@@ -6,9 +6,10 @@ import { ExternalLink } from '../utils/externalLink';
 
 export const About = () => {
   return (
-    <PageContainer>
+    <PageContainer title="About — Sander van Ast">
       <Hero
-        name="Sander van Ast"
+        name="About me"
+        title="Sander van Ast"
         description="I am learning new skills every day and master them to the end."
         avatar="/avatar.png"
         portrait="/portrait.png"
@@ -25,11 +26,7 @@ export const About = () => {
           my time with lego technic models.
         </p>
       </Row>
-      <Row
-      title='And more'
-      >
-          Education:
-      </Row>
+      <Row title="And more">Education:</Row>
       <Row title="Here can you find me">
         <div>
           <table>

@@ -1,6 +1,6 @@
 export interface postProps {
-  posts: [{ data: postProp; filePath: string }];
   content: string;
+  data: postProp;
   filePath: string;
 }
 
