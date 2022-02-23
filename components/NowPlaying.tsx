@@ -93,13 +93,6 @@ export const NowPlaying = () => {
       </div>
 
       <AnimatedBars />
-
-      <style jsx>{`
-        .fa-compact-disc:hover {
-          transform-origin: center;
-          transform: rotate(360deg);
-        }
-      `}</style>
     </div>
   ) : (
     <div className="flex gap-2">
