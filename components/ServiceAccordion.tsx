@@ -25,8 +25,8 @@ export const ServiceAccordion: FC<AccordionProps> = ({
     setHeight(active ? '0px' : `${contentSpace.current.scrollHeight}px`);
     setRotate(
       active
-        ? 'transform duration-700 ease'
-        : 'transform duration-700 ease rotate-180'
+        ? 'transform transition-transform '
+        : 'transform rotate-180 transition-transform'
     );
   }
 
@@ -39,15 +39,11 @@ export const ServiceAccordion: FC<AccordionProps> = ({
         onClick={toggleAccordion}
       >
         <div className='flex items-center'>
-          <span className='mr-10'>
+          <span className='mr-10 text-gray-mid-light dark:text-gray-mid-dark'>
           0{number + 1}
           </span>
           <h3 className="text-xl">{title}</h3>
         </div>
-        {/* <img
-          alt="Chevron icon"
-          className={`${rotate} inline-block`}
-        /> */}
         <i className={`fa-solid fa-angle-down ${rotate}`}></i>
       </button>
       <div

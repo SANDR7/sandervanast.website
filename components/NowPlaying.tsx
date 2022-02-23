@@ -91,7 +91,16 @@ export const NowPlaying = () => {
         </span>
         <span className="font-thin">{data.artist}</span>
       </div>
-      <AnimatedBars/>
+      <i className="fa-solid fa-compact-disc pt-1 text-2xl"></i>
+      {/* <i className="fa-solid fa-record-vinyl pt-1 text-2xl"></i> */}
+      {/* <AnimatedBars/> */}
+
+      <style jsx>{`
+        .fa-compact-disc:hover {
+          transform-origin: center;
+          transform: rotate(360deg);
+        }
+      `}</style>
     </div>
   ) : (
     <div className="flex gap-2">
