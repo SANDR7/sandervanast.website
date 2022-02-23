@@ -73,11 +73,15 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col my-2 space-y-4">
           <ExternalLink href="https://github.com/SANDR7">Github</ExternalLink>
-          <ExternalLink href="https://github.com/SANDR7">
+          <ExternalLink href="https://www.instagram.com/sander.ast/">
             Instagram
           </ExternalLink>
-          <ExternalLink href="https://github.com/SANDR7">LinkedIn</ExternalLink>
-          <ExternalLink href="https://github.com/SANDR7">Dribbble</ExternalLink>
+          <ExternalLink href="https://www.linkedin.com/in/sander-van-ast/">
+            LinkedIn
+          </ExternalLink>
+          <ExternalLink href="https://dribbble.com/SANDR7">
+            Dribbble
+          </ExternalLink>
         </div>
         <div className="flex flex-col my-2 space-y-4">
           <ExternalLink href="https://cdn.sanity.io/files/pjowr1ws/sanity-data/aaaf80fadcb0ada28f1ace442f92f3e3d2480edd.pdf">
@@ -89,10 +93,10 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col space-y-6">
           <Link href={'/journal/secret'}>
-            <a href="">secret</a>
+            <a>Secret</a>
           </Link>
           <Link href={'/journal/hello'}>
-            <a href="">hello</a>
+            <a>Hello</a>
           </Link>
         </div>
       </div>
